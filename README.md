@@ -1,6 +1,6 @@
 # Centera - Produktový Web
 
-Moderní produktový web pro systém **Centera** (ActiveRetail) - komplexní řešení pro správu obchodních center.
+Moderní produktový web pro systém **Centera** - komplexní řešení pro správu obchodních center.
 
 ## 📋 O projektu
 
@@ -56,19 +56,24 @@ Web je navržen s důrazem na:
 - **Infrastruktura**: Docker, Nginx, Linux, Git, CI/CD
 
 ### Kontaktní sekce
-- Kontaktní formulář s validací
 - Kontaktní informace (email, web)
-- Notifikační systém pro zpětnou vazbu
+- CTA tlačítka pro snadný kontakt
+- Elegantní centrovaný layout
 
 ## 📁 Struktura souborů
 
 ```
-centera-product-site/
-├── index.html          # Hlavní HTML struktura
-├── styles.css          # Kompletní CSS styly
-├── script.js           # JavaScript pro interaktivitu
-├── centera.png         # Logo Centery
-└── README.md           # Tato dokumentace
+centeraWeb/
+├── assets/
+│   ├── css/
+│   │   └── styles.css      # Kompletní CSS styly
+│   ├── js/
+│   │   └── script.js       # JavaScript pro interaktivitu
+│   └── images/
+│       ├── centera.png     # Logo Centery (barevné)
+│       └── centera-white.svg # Logo Centery (bílé)
+├── index.html              # Hlavní HTML struktura
+└── README.md               # Tato dokumentace
 ```
 
 ## 🛠️ Technologie
@@ -93,13 +98,6 @@ Web je vytvořen pomocí:
 - Parallax efekt pro gradient orbs
 - Ripple efekt na tlačítkách
 - Counter animace pro statistiky
-
-### Formulář
-- Real-time validace inputů
-- Vizuální zpětná vazba (zelená/červená border)
-- Loading stav při odesílání
-- Toast notifikace pro úspěch/chybu
-- Automatické resetování po odeslání
 
 ### Další funkce
 - Responzivní design pro mobily/tablety/desktop
@@ -171,32 +169,12 @@ Upravte text přímo v `index.html`:
 3. Přidejte link do navigace
 4. Přidejte animace v `script.js`
 
-## 📧 Kontaktní formulář
-
-Formulář je připraven pro integraci s backendem. Upravte funkci v `script.js`:
-
-```javascript
-// V souboru script.js, řádek ~150
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // ZDE přidejte váš API endpoint
-    const response = await fetch('YOUR_API_ENDPOINT', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    });
-});
-```
-
 ## 🔒 Bezpečnost
 
-- Validace na frontend i backend (backend zatím není implementován)
-- Ochrana proti XSS pomocí validace inputů
+- Čistý frontend bez zpracování citlivých dat
 - HTTPS doporučeno pro produkci
 - Žádné citlivé informace v JS
+- Moderní bezpečnostní standardy
 
 ## 🌐 Browser support
 
@@ -241,7 +219,6 @@ Design inspirován:
 
 ## 🚧 TODO (budoucí vylepšení)
 
-- [ ] Integrace s backendem pro kontaktní formulář
 - [ ] Přidání screenshotů aplikace
 - [ ] Video demo systému
 - [ ] Blog sekce
@@ -250,6 +227,7 @@ Design inspirován:
 - [ ] Multilanguage podpora (EN)
 - [ ] Dark mode toggle
 - [ ] Cookie consent banner
+- [ ] Animované demo funkčnosti
 
 ## 📄 Licence
 

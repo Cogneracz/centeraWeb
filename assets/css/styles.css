@@ -732,31 +732,31 @@ body {
     background: var(--bg-secondary);
 }
 
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    align-items: start;
+.contact-content-centered {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.contact-text h2 {
+.contact-content-centered h2 {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--primary);
     margin-bottom: var(--spacing-md);
 }
 
-.contact-text p {
-    font-size: 1.1rem;
+.contact-description {
+    font-size: 1.25rem;
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .contact-item {
@@ -767,10 +767,18 @@ body {
     padding: 1.5rem;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .contact-icon {
     font-size: 2rem;
+    flex-shrink: 0;
 }
 
 .contact-item h4 {
@@ -791,45 +799,11 @@ body {
     color: var(--primary);
 }
 
-.contact-form-wrapper {
-    background: white;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
-}
-
-.contact-form h3 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: var(--spacing-md);
-}
-
-.form-group {
-    margin-bottom: var(--spacing-md);
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--bg-tertiary);
-    border-radius: var(--radius-md);
-    font-family: var(--font-family);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 58, 82, 0.1);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+.contact-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* ==========================================
@@ -1036,6 +1010,10 @@ body {
     }
 
     .tech-features {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
         grid-template-columns: 1fr;
     }
 
